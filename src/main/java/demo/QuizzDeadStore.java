@@ -1,4 +1,4 @@
-package devoxx;
+package demo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,10 +20,10 @@ public class QuizzDeadStore {
     case 42:
       switch (playerAge) {
       case 42:
-        amountOfMoney = 10_000; 
+        amountOfMoney = 10_000;
         break;
       default:
-        amountOfMoney = 5_000; 
+        amountOfMoney = 5_000;
         break;
       }
     default:

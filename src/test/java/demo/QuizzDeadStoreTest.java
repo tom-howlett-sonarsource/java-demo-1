@@ -1,4 +1,4 @@
-package devoxx;
+package demo;
 
 public class QuizzDeadStoreTest {
 
