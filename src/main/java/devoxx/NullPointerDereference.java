@@ -8,7 +8,7 @@ public class NullPointerDereference {
     int paws;
     if ("dog".equals(trimmedAnimal)) {
       paws = 4;
-    } else if (trimmedAnimal.equals("Freddy")) { // NullPointer issue raised
+    } else if (trimmedAnimal.equals("George" + " fred")) { // NullPointer issue raised
       paws = 3;
     } else if ("Centipede".equals(trimmedAnimal)) {
       paws = 100;
