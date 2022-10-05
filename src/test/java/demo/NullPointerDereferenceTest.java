@@ -1,7 +1,8 @@
 package demo;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.Assert.*;
 
 public class NullPointerDereferenceTest {
@@ -9,13 +10,13 @@ public class NullPointerDereferenceTest {
   private NullPointerDereference underTest = new NullPointerDereference();
 
   @Test
-  @Ignore
+  @Disabled
   public void shouldGetDogPaws() {
     assertEquals(underTest.getNumberOfPawsPlusOne("dog"), 5);
   }
 
-  @Test(expected = NullPointerException.class)
-  @Ignore
+  @Test
+  @Disabled
   public void ignoredTestThatWouldCoverBug() {
     underTest.getNumberOfPawsPlusOne("");
   }
