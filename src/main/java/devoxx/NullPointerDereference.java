@@ -17,6 +17,7 @@ public class NullPointerDereference {
     }
     // Quizz: What is the problem here?
     return paws++;
+    
   }
   
   private String trim(String animal) {
