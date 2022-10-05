@@ -24,3 +24,6 @@ bin
 *.iml
 .DS_Store
 target/
+
+#VSCode
+.vscode/
