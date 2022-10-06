@@ -2,15 +2,16 @@ package devoxx;
 
 public class NullPointerDereference {
   
-  public int getNumberOfPawsPlusOne(String animal) {
+  public int getNumberOfPawsPlusOne(String animal, String fred) {
     String trimmedAnimal = trim(animal);
+    String trimmedFred = trim(fred);
     
     int paws;
     if ("dog".equals(trimmedAnimal)) {
       paws = 4;
     } else if (trimmedAnimal.equals("tom")) { // NullPointer issue raised
       paws = 5;
-    } else if (trimmedAnimal.equals("Martin")) { // NullPointer issue raised
+    } else if (trimmedFred.equals("Martin")) { // NullPointer issue raised
       paws = 3;
     } else if ("Centipede".equals(trimmedAnimal)) {
       paws = 100;
