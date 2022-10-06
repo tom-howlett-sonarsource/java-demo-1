@@ -10,11 +10,11 @@ public class NullPointerDereferenceTest {
 
   @Test
   public void shouldGetDogPaws() {
-    assertEquals(underTest.getNumberOfPawsPlusOne("dog"), 4);
+    assertEquals(underTest.getNumberOfPawsPlusOne("dog", "basset"), 4);
   }
 
   @Test(expected = NullPointerException.class)
   public void ignoredTestThatWouldCoverBug() {
-    underTest.getNumberOfPawsPlusOne("");
+    underTest.getNumberOfPawsPlusOne("", "");
   }
 }
