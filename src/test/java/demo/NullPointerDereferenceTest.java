@@ -10,15 +10,15 @@ public class NullPointerDereferenceTest {
 
   @Test
   public void shouldGetDogPaws() {
-    assertEquals(4, underTest.getNumberOfLegsPlusOne("dog"));
+    assertEquals(5, underTest.getNumberOfLegsPlusOne("dog"));
   }
 
   @Test
   public void shouldGetPirateLegs() {
-    assertEquals(1, underTest.getNumberOfLegsPlusOne("pirate"));
+    assertEquals(2, underTest.getNumberOfLegsPlusOne("pirate"));
   }
 
-  @Test(expected = NullPointerException.class)
+  @Test(expected = RuntimeException.class)
   public void ignoredTestThatWouldCoverBug() {
     underTest.getNumberOfLegsPlusOne("");
   }
