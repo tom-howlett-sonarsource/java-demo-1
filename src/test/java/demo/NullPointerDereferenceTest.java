@@ -10,7 +10,12 @@ public class NullPointerDereferenceTest {
 
   @Test
   public void shouldGetDogPaws() {
-    assertEquals(underTest.getNumberOfLegsPlusOne("dog"), 4);
+    assertEquals(4, underTest.getNumberOfLegsPlusOne("dog"));
+  }
+
+  @Test
+  public void shouldGetPirateLegs() {
+    assertEquals(1, underTest.getNumberOfLegsPlusOne("pirate"));
   }
 
   @Test(expected = NullPointerException.class)

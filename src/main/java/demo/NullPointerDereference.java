@@ -8,15 +8,16 @@ public class NullPointerDereference {
     int legs;
     if ("dog".equals(trimmedAnimal)) {
       legs = 4;
-    } else if (trimmedAnimal.equals("kangaroo")) { // NullPointer issue raised
+    } else if ("kangaroo".equals(trimmedAnimal)) { 
       legs = 2;
     } else if ("Centipede".equals(trimmedAnimal)) {
       legs = 100;
+    } else if("pirate".equals(trimmedAnimal)) {
+      legs = 1;
     } else {
       throw new RuntimeException(String.format("Unknown Animal %s", trimmedAnimal));
     }
-    // Quizz: What is the problem here?
-    return legs++;
+    return ++legs;
 
   }
 
