@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sonarsource</groupId>
 	<artifactId>java-demo-1</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<properties>
 		<sonar.sources>src/main/java</sonar.sources>
 		<maven.compiler.source>1.8</maven.compiler.source>
