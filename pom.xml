@@ -6,7 +6,7 @@
 	<artifactId>java-demo-1</artifactId>
 	<version>1.0.1</version>
 	<properties>
-		<sonar.sources>src/main/java,src/main/javascript</sonar.sources>
+		<sonar.sources>src/main/java</sonar.sources>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<sonar.organization>tom-howlett-sonarsource</sonar.organization>
@@ -29,12 +29,22 @@
 			<version>3.4.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- Only needed to run tests in a version of IntelliJ IDEA that bundles older versions -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-launcher</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.vintage</groupId>
+        <artifactId>junit-vintage-engine</artifactId>
+        <scope>test</scope>
+    </dependency>
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
@@ -46,6 +56,19 @@
 			<version>3.1</version>
 		</dependency>
 	</dependencies>
+
+	<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit</groupId>
+            <artifactId>junit-bom</artifactId>
+            <version>5.9.1</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+	</dependencyManagement>
+
 	<build>
 		<pluginManagement>
 			<plugins>

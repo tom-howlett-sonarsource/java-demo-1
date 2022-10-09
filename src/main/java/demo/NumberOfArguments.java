@@ -1,7 +1,7 @@
-package devoxx;
+package demo;
 
 public class NumberOfArguments {
-  
+
   public int getAnimalSpeed(
       int numberOfPaws, int hairDensity, boolean isWet,
       boolean hasEaten, boolean isSleepy, boolean isHappy,
@@ -28,7 +28,7 @@ public class NumberOfArguments {
     }
     return speed;
   }
-  
+
   public int getAnimalHapiness(boolean isWet,
       boolean hasEaten, boolean isSleepy,
       boolean isAfraid, boolean isARabbit) {

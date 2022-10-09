@@ -1,10 +1,10 @@
-package devoxx;
+package demo;
 
 public class NullPointerDereference {
-  
+
   public int getNumberOfPawsPlusOne(String animal) {
     String trimmedAnimal = trim(animal);
-    
+
     int paws;
     if ("dog".equals(trimmedAnimal)) {
       paws = 4;
@@ -19,7 +19,7 @@ public class NullPointerDereference {
     return paws++;
 
   }
-  
+
   private String trim(String animal) {
     if (animal.isEmpty()) {
       return null;
