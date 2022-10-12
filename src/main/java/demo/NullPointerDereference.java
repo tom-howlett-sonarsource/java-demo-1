@@ -6,16 +6,17 @@ public class NullPointerDereference {
     String trimmedAnimal = trim(animal);
 
     int legs;
-    int arms;
     
     if ("dog".equals(trimmedAnimal)) {
       legs = 4;
-    } else if (trimmedAnimal.equals("kangaroo")) { // NullPointer issue raised
+    } else if ("kangaroo".equals(trimmedAnimal)) { // NullPointer issue raised
       legs = 2;
     } else if ("Centipede".equals(trimmedAnimal)) {
       legs = 100;
+    } else if ("Fido".equals(trimmedAnimal)){
+      legs = 3;
     } else {
-      throw new RuntimeException(String.format("Unknown Animal %s", trimmedAnimal));
+      throw new IllegalArgumentException(String.format("Unknown Animal %s", trimmedAnimal));
     }
 
     return legs;
