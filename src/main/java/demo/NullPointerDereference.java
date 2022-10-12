@@ -2,10 +2,12 @@ package demo;
 
 public class NullPointerDereference {
 
-  public int getNumberOfLegsPlusOne(String animal) {
+  public int getNumberOfLegs(String animal) {
     String trimmedAnimal = trim(animal);
 
     int legs;
+    int arms;
+    
     if ("dog".equals(trimmedAnimal)) {
       legs = 4;
     } else if (trimmedAnimal.equals("kangaroo")) { // NullPointer issue raised
@@ -15,8 +17,8 @@ public class NullPointerDereference {
     } else {
       throw new RuntimeException(String.format("Unknown Animal %s", trimmedAnimal));
     }
-    // Quizz: What is the problem here?
-    return legs++;
+
+    return legs;
 
   }
 
