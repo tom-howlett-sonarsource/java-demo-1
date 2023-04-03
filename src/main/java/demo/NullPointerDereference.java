@@ -12,6 +12,7 @@ public class NullPointerDereference {
       legs = 4;
     } else if (trimmedAnimal.equals("kangaroo")) { // NullPointer issue raised
       legs = 2;
+      feet = 4;
     } else if ("Centipede".equals(trimmedAnimal)) {
       legs = 100;
     } else {
